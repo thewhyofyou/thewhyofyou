@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Astrology theme */
+    --background: 0 0% 100%;
+    --foreground: 232 27% 19%; /* #23253a - dark navy */
+
+    --card: 0 0% 100%;
+    --card-foreground: 232 27% 19%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 232 27% 19%;
+
+    /* Primary - Gold accent */
+    --primary: 51 100% 50%; /* #ffd700 - gold */
+    --primary-foreground: 232 27% 19%;
+
+    /* Secondary - Dark navy */
+    --secondary: 232 27% 19%; /* #23253a */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted - Soft backgrounds */
+    --muted: 232 20% 96%;
+    --muted-foreground: 232 15% 45%;
+
+    /* Accent - Teal */
+    --accent: 172 100% 33%; /* #00a896 - teal */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 232 20% 90%;
+    --input: 232 20% 90%;
+    --ring: 51 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom celestial gradients - mystical and luxurious */
+    --gradient-celestial: linear-gradient(135deg, hsl(232 27% 19%) 0%, hsl(232 35% 25%) 50%, hsl(232 27% 19%) 100%);
+    --gradient-divine: linear-gradient(135deg, hsl(51 100% 50%) 0%, hsl(45 100% 60%) 100%);
+    --gradient-mystical: linear-gradient(180deg, hsl(232 27% 19%) 0%, hsl(232 30% 15%) 100%);
+    --gradient-luxury: linear-gradient(135deg, hsl(232 27% 19%) 0%, hsl(51 100% 50% / 0.15) 50%, hsl(232 27% 19%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(232 27% 19% / 0.95) 0%, hsl(232 27% 19% / 0.85) 100%);
+
+    /* Shadows - golden glow for luxury */
+    --shadow-glow: 0 0 40px hsl(51 100% 50% / 0.4);
+    --shadow-glow-intense: 0 0 60px hsl(51 100% 50% / 0.6);
+    --shadow-soft: 0 10px 40px -10px hsl(232 27% 19% / 0.3);
+    --shadow-luxury: 0 20px 60px -15px hsl(51 100% 50% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 232 27% 12%;
+    --foreground: 51 100% 95%;
+
+    --card: 232 27% 19%;
+    --card-foreground: 51 100% 95%;
+
+    --popover: 232 27% 19%;
+    --popover-foreground: 51 100% 95%;
+
+    --primary: 51 100% 50%;
+    --primary-foreground: 232 27% 19%;
+
+    --secondary: 232 35% 25%;
+    --secondary-foreground: 51 100% 95%;
+
+    --muted: 232 35% 25%;
+    --muted-foreground: 51 80% 80%;
+
+    --accent: 172 100% 33%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 51 100% 50% / 0.2;
+    --input: 232 35% 25%;
+    --ring: 51 100% 50%;
+    
+    --sidebar-background: 232 27% 15%;
+    --sidebar-foreground: 51 100% 95%;
+    --sidebar-primary: 51 100% 50%;
+    --sidebar-primary-foreground: 232 27% 19%;
+    --sidebar-accent: 232 35% 20%;
+    --sidebar-accent-foreground: 51 100% 95%;
+    --sidebar-border: 51 100% 50% / 0.2;
+    --sidebar-ring: 51 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gradient-divine {
+    @apply bg-gradient-to-r from-primary via-primary to-primary/80 bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-celestial {
+    background: var(--gradient-celestial);
+  }
+  
+  .bg-gradient-divine {
+    background: var(--gradient-divine);
+  }
+  
+  .bg-gradient-mystical {
+    background: var(--gradient-mystical);
+  }
+  
+  .bg-gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-glow-intense {
+    box-shadow: var(--shadow-glow-intense);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+}
