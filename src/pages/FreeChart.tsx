@@ -30,7 +30,7 @@ const FreeChart = () => {
       
       // Call backend edge function to calculate chart
       const response = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/calculate-chart`,
+        `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/calculate-chart`,
         {
           method: 'POST',
           headers: {

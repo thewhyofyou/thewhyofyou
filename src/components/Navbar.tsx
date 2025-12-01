@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/src/components/ui/button";
-import logo from "@/src/assets/logo.png";
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navLinks = [{
@@ -40,7 +39,7 @@ const Navbar = () => {
 
           {/* Center Logo */}
           <Link href="/" className="flex items-center group">
-            <Image src={logo} alt="The Why of You" width={144} height={144} className="h-36 w-auto transition-all group-hover:drop-shadow-[0_0_12px_rgba(255,215,0,0.6)]" />
+            <Image src="/logo.png" alt="The Why of You" width={144} height={144} className="h-36 w-auto transition-all group-hover:drop-shadow-[0_0_12px_rgba(255,215,0,0.6)]" />
           </Link>
 
           {/* Right Navigation */}

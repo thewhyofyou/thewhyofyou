@@ -1,6 +1,5 @@
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
-import founderPhoto from "@/src/assets/founder-nadya.jpg";
 
 const About = () => {
   return (
@@ -14,7 +13,7 @@ const About = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="md:col-span-1">
             <img 
-              src={founderPhoto} 
+              src="/founder-nadya.jpg" 
               alt="Nadya, Founder of the Why of You" 
               className="w-full rounded-lg shadow-luxury"
             />
