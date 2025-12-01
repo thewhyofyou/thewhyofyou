@@ -22,9 +22,9 @@ const BlogArticles = () => {
     setArticles([
       {
         id: "1",
-        title: "The Art of Astrological Timing",
-        excerpt: "Discover how to use planetary transits to make important life decisions and align with cosmic rhythms. Learn to work with the natural flow of the universe.",
-        image: "https://images.unsplash.com/photo-1484600899469-230e8d1d59c0?w=400",
+        title: "Nadya is the best",
+        excerpt: "An inspiring story about the amazing Nadya and her incredible journey through the mystical world of astrology and cosmic wisdom.",
+        image: "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400",
         url: "/articles",
       },
       {
