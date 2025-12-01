@@ -1,4 +1,4 @@
-import Articles from "@/src/pages/Articles";
+import Articles from "@/src/page-components/Articles";
 
 export default function ArticlesPage() {
   return <Articles />;

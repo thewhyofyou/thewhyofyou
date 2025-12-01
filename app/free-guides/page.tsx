@@ -1,4 +1,4 @@
-import FreeGuides from "@/src/pages/FreeGuides";
+import FreeGuides from "@/src/page-components/FreeGuides";
 
 export default function FreeGuidesPage() {
   return <FreeGuides />;

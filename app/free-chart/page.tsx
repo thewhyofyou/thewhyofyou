@@ -1,4 +1,4 @@
-import FreeChart from "@/src/pages/FreeChart";
+import FreeChart from "@/src/page-components/FreeChart";
 
 export default function FreeChartPage() {
   return <FreeChart />;

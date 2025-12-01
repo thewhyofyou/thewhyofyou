@@ -1,4 +1,4 @@
-import Readings from "@/src/pages/Readings";
+import Readings from "@/src/page-components/Readings";
 
 export default function ReadingsPage() {
   return <Readings />;
