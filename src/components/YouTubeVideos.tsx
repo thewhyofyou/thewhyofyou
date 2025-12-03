@@ -22,6 +22,13 @@ const YouTubeVideos = () => {
     // Sample YouTube videos from @theWhyofYou channel
     setVideos([
       {
+        id: "0",
+        title: "Latest Cosmic Insights",
+        description: "Watch the latest video from @theWhyofYou channel for the most recent cosmic wisdom and astrology guidance.",
+        thumbnail: "https://img.youtube.com/vi/ZMMT80Jufxs/maxresdefault.jpg",
+        url: "https://youtu.be/ZMMT80Jufxs?si=lS0lKdFpzSn_7ICN",
+      },
+      {
         id: "1",
         title: "Understanding Your Birth Chart Basics",
         description: "Learn the fundamentals of reading your astrological birth chart and discover what the planets, houses, and signs reveal about your life path.",
