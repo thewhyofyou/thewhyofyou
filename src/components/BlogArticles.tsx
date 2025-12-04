@@ -22,7 +22,7 @@ const BlogArticles = () => {
     setArticles([
       {
         id: "1",
-        title: "Nadya is the best",
+        title: "Nadya is the best and works from her computer",
         excerpt: "An inspiring story about the amazing Nadya and her incredible journey through the mystical world of astrology and cosmic wisdom.",
         image: "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400",
         url: "/articles",

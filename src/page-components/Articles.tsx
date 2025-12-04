@@ -1,9 +1,7 @@
-"use client";
-
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card";
-import { useEffect, useState } from "react";
+import { getBlogs } from "@/lib/notion";
 
 interface Article {
   id: string;
@@ -13,56 +11,22 @@ interface Article {
   url: string;
 }
 
-const Articles = () => {
-  const [articles, setArticles] = useState<Article[]>([]);
+const Articles = async () => {
+  let articles: Article[] = [];
 
-  useEffect(() => {
-    // Sample astrology articles
-    setArticles([
-      {
-        id: "1",
-        title: "The Art of Astrological Timing",
-        excerpt: "Discover how to use planetary transits to make important life decisions and align with cosmic rhythms. Learn to work with the natural flow of the universe.",
-        image: "https://images.unsplash.com/photo-1484600899469-230e8d1d59c0?w=400",
-        url: "#",
-      },
-      {
-        id: "2",
-        title: "Venus and Relationships: Understanding Your Love Language",
-        excerpt: "Explore how Venus placement in your chart influences your love style, relationship patterns, and what you truly value in partnerships.",
-        image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400",
-        url: "#",
-      },
-      {
-        id: "3",
-        title: "Saturn Return: Your Cosmic Coming of Age",
-        excerpt: "Navigate this transformative transit that occurs around age 29-30 and emerge stronger, wiser, and more aligned with your authentic purpose.",
-        image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400",
-        url: "#",
-      },
-      {
-        id: "4",
-        title: "New Moon Intentions: Planting Seeds of Change",
-        excerpt: "Learn how to harness the potent energy of the new moon to set powerful intentions and create meaningful change in your life.",
-        image: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=400",
-        url: "#",
-      },
-      {
-        id: "5",
-        title: "The North Node: Your Soul's Purpose",
-        excerpt: "Discover how your North Node placement reveals your karmic path and the qualities you're meant to develop in this lifetime.",
-        image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=400",
-        url: "#",
-      },
-      {
-        id: "6",
-        title: "Mars in Your Chart: Understanding Your Drive",
-        excerpt: "Explore how Mars placement influences your motivation, assertiveness, and how you pursue your goals and desires.",
-        image: "https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=400",
-        url: "#",
-      },
-    ]);
-  }, []);
+  try {
+    const blogs = await getBlogs();
+    articles = blogs.map((blog) => ({
+      id: blog.id,
+      title: blog.title,
+      excerpt: blog.summary,
+      image: blog.image || "https://images.unsplash.com/photo-1484600899469-230e8d1d59c0?w=400",
+      url: "#",
+    }));
+  } catch (error) {
+    console.error("Error fetching blogs:", error);
+    articles = [];
+  }
 
   return (
     <div className="min-h-screen flex flex-col">
