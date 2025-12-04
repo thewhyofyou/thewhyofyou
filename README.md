@@ -1,73 +1,122 @@
-# Welcome to your Lovable project
+# The Why of You - Astrology Website
 
-## Project info
+A beautiful, modern astrology website built with Next.js, offering personalized readings, free birth charts, and cosmic guidance.
 
-**URL**: https://lovable.dev/projects/21273d7d-b971-4a85-9392-5936a2eb79f9
+## 🌟 Features
 
-## How can I edit this code?
+- **Free Birth Charts** - Generate personalized astrological charts
+- **Personal Readings** - Book one-on-one astrology consultations
+- **Free Guides** - Download comprehensive astrology PDFs
+- **Astro Reports** - Purchase detailed astrological analysis
+- **Blog Articles** - Read insights about cosmic events and spiritual guidance
+- **Video Content** - Access astrology educational videos
+- **Responsive Design** - Optimized for all devices
 
-There are several ways of editing your application.
+## 🚀 Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/21273d7d-b971-4a85-9392-5936a2eb79f9) and start prompting.
+- Node.js 18+ and npm installed
+- Git for version control
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+```bash
+# Clone the repository
+git clone https://github.com/thewhyofyou/lovable.git
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# Navigate to the project directory
+cd lovable
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Install dependencies
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:3000](http://localhost:3000) to view the website locally.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠️ Tech Stack
 
-**Use GitHub Codespaces**
+This project is built with modern web technologies:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Next.js 14.2.33** - React framework with App Router
+- **TypeScript** - Type-safe JavaScript
+- **React 18** - UI library with hooks and components
+- **Tailwind CSS** - Utility-first CSS framework
+- **Shadcn/UI** - Beautiful, accessible React components
+- **Supabase** - Backend as a service (database, auth, storage)
+- **TanStack Query** - Data fetching and state management
+- **Lucide React** - Beautiful icons
+- **Next.js Image** - Optimized image loading
 
-## What technologies are used for this project?
+## 📦 Project Structure
 
-This project is built with:
+```
+├── app/                    # Next.js App Router pages
+├── src/
+│   ├── components/         # React components
+│   ├── page-components/    # Page-specific components
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utility functions
+│   └── integrations/      # Third-party integrations (Supabase)
+├── public/                # Static assets (images, PDFs)
+├── supabase/             # Supabase configuration and migrations
+└── tailwind.config.ts    # Tailwind CSS configuration
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🚀 Deployment
 
-## How can I deploy this project?
+### Vercel (Recommended)
 
-Simply open [Lovable](https://lovable.dev/projects/21273d7d-b971-4a85-9392-5936a2eb79f9) and click on Share -> Publish.
+1. Connect your GitHub repository to [Vercel](https://vercel.com)
+2. Set environment variables:
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
+3. Deploy automatically with each push to master
 
-## Can I connect a custom domain to my Lovable project?
+### Build for Production
 
-Yes, you can!
+```bash
+# Create production build
+npm run build
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Test production build locally
+npm run start
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🌍 Environment Variables
+
+Create a `.env.local` file with:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your_supabase_key
+```
+
+## 📝 Adding Blog Content
+
+To add new blog articles, edit `src/components/BlogArticles.tsx` and add entries to the articles array:
+
+```typescript
+{
+  id: "new-id",
+  title: "Your Blog Title",
+  excerpt: "Your blog description...",
+  image: "https://images.unsplash.com/your-image",
+  url: "/articles",
+}
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License.
